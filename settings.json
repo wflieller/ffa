@@ -1,0 +1,16 @@
+{
+    "public": {
+
+    },
+
+    "private": {
+
+        "PrerenderIO": {
+            "serviceUrl": "http://disruptlabs.io/",
+            "token": "iuAzDep83QjX5ubncMHH"
+
+        }
+
+    }
+
+}

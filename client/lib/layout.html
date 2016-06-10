@@ -1,0 +1,142 @@
+<template name="layout">
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/disruptFav.png" rel="icon" type="image/x-icon" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link href='touchTouch/touchTouch.css' rel='stylesheet' type='text/css'>
+    </head>
+    <a name="top" id="top"></a>
+    <div class="homepageBg">
+    <nav class="navbar homepage-intro fadeIn" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-center hvr-grow" href="/"><img src="img/FFAlogo.png"></a>
+                <a class="navbar-brand text-center hvr-grow" href="http://facebook.com/footagefromabove" target="_blank">&nbsp;<i class="fa fa-facebook-official"></i></a>
+                <a class="navbar-brand text-center hvr-grow" href="http://twitter.com/footagefromabove" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a class="navbar-brand text-center hvr-grow" href="http://instagram.com/footagefromabove" target="_blank"><i class="fa fa-instagram"></i></a>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-center text-center">
+                    <li class="active"><a class="hvr-overline-from-center" href="/#top">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a class="hvr-overline-from-center" href="/bio#content">About Us</a></li>
+                    
+                    <li><a class="hvr-overline-from-center" href="/work#content">Work</a></li>
+                    <li><a class="hvr-overline-from-center" href="/gallery#content">Gallery</a></li>
+                    <li><a class="hvr-overline-from-center" href="/contact#content">Contact Us</a></li>
+                    <!-- <li><form method="get" action="/pdf/bigslicepizzamenu.pdf"><button type="sibmit" class="btn downloadMenu hvr-float-shadow">Download Our Menu</button></form></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    <div id="startchange"></div>
+    <a id="content"></a>
+    <a name="content"></a>
+    <div id="content"></div>
+
+    
+    
+
+
+    {{>yield}} {{>socialSidebar}}
+    {{>footer}}
+    
+    
+    <div class="backToTop hvr-bob">
+        <a href="#top" class="fa fa-chevron-up fa-lg "></a>
+    </div>
+
+</div>
+
+    <script>
+    $(document).ready(function() {
+        var scroll_start = 0;
+        var startchange = $('#startchange');
+        var offset = startchange.offset();
+        if (startchange.length) {
+            $(document).scroll(function() {
+                scroll_start = $(this).scrollTop();
+                if (scroll_start > offset.top) {
+
+                    $(".backToTop a").css({
+                        'color': '#333',
+                        'background': 'rgba(355,355,355,.6)'
+
+                    });
+                } else {
+                    $(".backToTop a").css({
+                        'color': 'rgba(0,0,0,0)',
+                        'background': 'transparent'
+
+                    });
+
+
+                }
+            });
+        }
+
+        $("#contactForm").submit(function(e) {
+            $("#contactForm").css("display", "none");
+            $("#thankYou").css("display", "");
+        });
+    });
+
+    $(function() {
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 300) {
+                $(".navbar-header").addClass('smaller');
+                $(".navbar-nav").addClass('smaller');
+                $(".navbar").addClass('smaller');
+                $(".navbar").css('position', 'fixed');
+
+            } else {
+                $(".navbar-header").removeClass("smaller");
+                $(".navbar-nav").removeClass("smaller");
+                $(".navbar").removeClass('smaller');
+                $(".navbar").css('position', 'absolute');
+
+            }
+        });
+    });
+
+   
+
+    $('.carousel').carousel();
+
+
+
+    new WOW().init();
+
+
+    </script>
+    <script type="text/javascript">
+    var $root = $('html, body');
+    $('a').click(function() {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 500, function() {
+            window.location.hash = href;
+        });
+        return false;
+    });
+    </script>
+
+   
+</template>

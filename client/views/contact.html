@@ -1,0 +1,32 @@
+<template name="contact">
+    <div class="container-fluid content" id="content">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1 class="pageTitle">Contact Us</h1>
+            </div>
+        </div>
+        <div class="row contentP">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+        <h3>Direct Booking</h3>
+        <h5>Estefan Garcia</h5>
+        <p><i class="fa fa-phone"></i> &nbsp;<a href="tel:1-210-342-1230">(210) 416-6086</a></p>
+        <p><i class="fa fa-envelope-o"></i> &nbsp;<a href="mailto:admin@disruptlabs.io">email@ffa.com</a></p>
+ 
+        </div>
+        </div>
+        
+        <div class="row contentP">
+            <div class="col-sm-6 col-sm-offset-3 text-center ">
+                <p>If you're looking to get a quote contact us below.</p>
+                <hr>
+            </div>
+            <div class="col-sm-10 col-sm-offset-1 wow fadeIn" data-wow-delay=".3s">
+                {{>contactForm}}
+            </div>
+            <div class="col-sm-10 col-sm-offset-1 thankYou text-center fadeIn homepage-intro" id="thankYou" style="display:none">
+                <i class="fa fa-check fa-large"></i>
+                <p>Thank you for contacting us, we'll be in touch shortly!</p>
+            </div>
+        </div>
+    </div>
+</template>
