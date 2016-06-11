@@ -2,7 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,900);
 
-
 /* Homepage Styling #################################################*/
 
 
@@ -25,7 +24,7 @@
 }
 
 .homepageBg {
-    background: linear-gradient(to bottom, rgba(300,300,300,.6) 0, rgba(2, 18, 41, .28)50%, rgba(300,300,300,.6) 100%), url("img/cityscape.jpg");
+    background: linear-gradient(to bottom, rgba(300, 300, 300, .6) 0, rgba(2, 18, 41, .28)50%, rgba(300, 300, 300, .6) 100%), url("img/cityscape.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -58,7 +57,6 @@ footer {
     background: transparent !important;
     color: #fff !important;
 }
-
 
 
 /*Gallery Styling*/
@@ -95,7 +93,6 @@ footer {
     padding-bottom: 5px;
     background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
     opacity: 1;
-    
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
     -o-transition: all .2s ease;
@@ -116,7 +113,6 @@ footer {
     display: block;
 }
 
-
 @media (max-width: 1100px) {
     #columns {
         -webkit-column-count: 5;
@@ -132,7 +128,6 @@ footer {
         column-count: 4;
     }
 }
-
 
 @media (max-width: 760px) {
     #columns {
@@ -156,31 +151,17 @@ footer {
         -moz-column-count: 1;
         column-count: 1;
     }
-
     .pin p {
         display: none;
     }
-
     .pin {
         width: 100%;
-
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 #columns:hover .pin:not(:hover) {
     opacity: 0.4;
 }
-
 
 
 /**/
@@ -876,7 +857,7 @@ nav {
     background-color: #111;
 }
 
-.hvr-overline-from-center:before {
+.hvr-overline-reveal:before {
     background: #333;
 }
 
@@ -973,6 +954,7 @@ footer a:hover {
 .socialSidebar .fa-instagram:hover {
     color: #458eff;
     border: 2px solid #458eff;
+    
 }
 
 .socialSidebar .fa-pinterest:hover {
@@ -1169,9 +1151,8 @@ p {
 
 @media (max-width: 767px) {
     .content {
-    padding: 100px 0px;
+        padding: 100px 0px;
     }
-
     h1 {
         font-size: 30px;
     }
@@ -1220,8 +1201,7 @@ p {
         color: #333;
     }
     .navbar-header {
-        height: 85px
-        ;
+        height: 85px;
     }
     .navbar-header.smaller {
         height: 75px;
@@ -1233,7 +1213,6 @@ p {
         height: 80px;
         width: 170px;
     }
-
     .navbar.smaller {
         background: transparent;
         box-shadow: none;
@@ -1260,7 +1239,7 @@ p {
     .container-fluid > .navbar-header,
     .container > .navbar-collapse,
     .container-fluid > .navbar-collapse {
-        background-color: rgba(355,355,355,.3);
+        background-color: rgba(355, 355, 355, .3);
     }
     #Carousel > .carousel-inner > .item > img {
         width: 100%;
