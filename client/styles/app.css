@@ -926,7 +926,7 @@ footer a:hover {
     position: fixed;
     z-index: 1000;
     bottom: 0%;
-    left: 45%;
+    left: 44.2%;
 }
 
 .socialSidebar .fa {
@@ -954,7 +954,6 @@ footer a:hover {
 .socialSidebar .fa-instagram:hover {
     color: #458eff;
     border: 2px solid #458eff;
-    
 }
 
 .socialSidebar .fa-pinterest:hover {
@@ -1150,6 +1149,11 @@ p {
 }
 
 @media (max-width: 767px) {
+    .homepageBg {
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: inherit;
+    }
     .content {
         padding: 150px 0px;
     }
