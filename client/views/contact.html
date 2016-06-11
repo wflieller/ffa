@@ -16,7 +16,7 @@
         </div>
         
         <div class="row contentP">
-            <div class="col-sm-6 col-sm-offset-3 text-center ">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
                 <p>If you're looking to get a quote contact us below.</p>
                 <hr>
             </div>
@@ -29,4 +29,12 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    	
+    	$("#contactForm").submit(function(e) {
+            $("#contactForm").css("display", "none");
+            $("#thankYou").css("display", "");
+        });
+    </script>
 </template>
