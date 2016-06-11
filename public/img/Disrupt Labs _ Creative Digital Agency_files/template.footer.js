@@ -1,8 +1,0 @@
-(function(){
-Template.__checkName("footer");
-Template["footer"] = new Template("Template.footer", (function() {
-  var view = this;
-  return HTML.Raw('<footer>\n        <div class="container-fluid">\n            <div class="row text-center" style="padding-bottom:50px">\n                <div class="col-xs-12">\n                    <p>&copy; Footage From Above 2016</p>\n                    <p>Website Design by <a href="http://disruptlabs.io">Disrupt Labs</a></p>\n                    <br>\n                    <p>\n                        <a data-toggle="modal" data-target=".termsOfService-modal-lg">Terms of Service</a>&nbsp; | &nbsp;<a data-toggle="modal" data-target=".privacyPolicy-modal-lg">Privacy Policy</a>\n                    </p>\n                </div>\n                <div class="modal fade termsOfService-modal-lg" tabindex="-1" role="dialog" aria-labelledby="termsOfService" aria-hidden="true">\n                    <div class="modal-dialog modal-lg">\n                        <div class="modal-content">\n                            <embed id="modalEmbed" src="pdf/TermsOfService.pdf">\n                        </div>\n                    </div>\n                </div>\n                <div class="modal fade privacyPolicy-modal-lg" tabindex="-1" role="dialog" aria-labelledby="privacyPolicy" aria-hidden="true">\n                    <div class="modal-dialog modal-lg">\n                        <div class="modal-content">\n                            <embed id="modalEmbed" src="pdf/PrivacyPolicy.pdf">\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </footer>');
-}));
-
-}).call(this);
