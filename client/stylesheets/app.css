@@ -2,6 +2,22 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,900);
 
+
+/* NavBar Styling #################################################*/
+
+
+/*###################################################################*/
+
+
+/*###################################################################*/
+
+
+/*###################################################################*/
+
+
+
+
+
 /* Homepage Styling #################################################*/
 
 
@@ -50,7 +66,7 @@
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    padding: 50px;
+    padding: 0px 50px;
 }
 
 footer {
@@ -294,8 +310,8 @@ li > form {
 }
 
 .homepage-intro {
-    -webkit-animation-duration: 3s;
-    -webkit-animation-delay: .6s;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
     animation-fill-mode: forwards;
     opacity: 0;
     z-index: 0;
@@ -1069,7 +1085,7 @@ p {
 
 .navbar.smaller {
     background-color: #333;
-    background: rgba(355, 355, 355, .3);
+    background: rgba(355, 355, 355, .5);
     box-shadow: 0px 2px 5px #888888;
 }
 
@@ -1149,10 +1165,13 @@ p {
 }
 
 @media (max-width: 767px) {
+
+
     .homepageBg {
+        background-position: center center;
         background-size: cover;
-        background-attachment: scroll;
-        background-position: inherit;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
     }
     .content {
         padding: 150px 0px;
@@ -1243,7 +1262,7 @@ p {
     .container-fluid > .navbar-header,
     .container > .navbar-collapse,
     .container-fluid > .navbar-collapse {
-        background-color: rgba(355, 355, 355, .3);
+        background-color: rgba(355, 355, 355, 1);
     }
     #Carousel > .carousel-inner > .item > img {
         width: 100%;
@@ -1251,7 +1270,7 @@ p {
     }
     /* Homepage Styling */
     .navbar-collapse.in {
-        height: 325px !important;
+        height: 300px !important;
     }
     .dividerPizza {
         background: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('img/pizza1.jpg');

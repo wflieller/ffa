@@ -10,7 +10,7 @@ if (Meteor.isServer) {
 
 
     Meteor.settings.contactForm = {
-        emailTo: 'walker@disruptlabs.io'
+        emailTo: 'estefan_garcia@me.com'
     };
 
 }

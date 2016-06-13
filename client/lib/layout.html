@@ -4,10 +4,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="img/disruptFav.png" rel="icon" type="image/x-icon" />
+        <link href="img/FFAlogo.png" rel="icon" type="image/x-icon" />
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link href='touchTouch/touchTouch.css' rel='stylesheet' type='text/css'>
     </head>
     <a name="top" id="top"></a>
     <div class="homepageBg">
@@ -15,11 +14,11 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
                 </button>
                 <a class="navbar-brand text-center hvr-grow" href="/"><img src="img/FFAlogo.png"></a>
                 <a class="navbar-brand text-center hvr-grow" href="http://facebook.com/footagefromabove" target="_blank">&nbsp;<i class="fa fa-facebook-official"></i></a>
@@ -28,7 +27,7 @@
                 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse text-center animate fadeIn homepage-intro" id="navbar">
                 <ul class="nav navbar-nav navbar-center text-center">
                     <li class="active"><a class="hvr-overline-reveal" href="/#top">Home<span class="sr-only">(current)</span></a></li>
                     <li><a class="hvr-overline-reveal" href="/bio#content">About Us</a></li>
@@ -112,7 +111,11 @@
         });
     });
 
-   
+   $(document).on('click', '.navbar-collapse.in', function(e) {
+        if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+            $(this).collapse('hide');
+        }
+    });
 
     $('.carousel').carousel();
 
